@@ -1,14 +1,15 @@
 <template>
   <div>
     <h1>{{title}}</h1>
-    <ul>
+    <ul class="exists">
       <book-item v-for='book in books' :key='book.id' :book='book'></book-item>
     </ul>
-    <hr>Filtered Books By Ownership</h2>
+    <hr>
+    <h2>Filtered Books By Ownership</h2>
     <select v-model="holding">
       <option v-for="filter in filters">{{filter}}</option>
     </select>
-    <ul>
+    <ul class="exists">
       <book-item v-for='book in filteredBooks' :key='book.id' :book='book'></book-item>
     </ul>
     <br><hr>
