@@ -3,14 +3,19 @@
     <input v-model="bookData.bookTitle" type="text" name="title" value="" placeholder="Book Title">
     <input v-model="bookData.bookAuthor" type="text" name="author" value="" placeholder="Book Author">
     <div>
-      <label for="finishedReading">Finished Reading</label>
-      <input v-model="bookData.finishedReading" type="checkbox">
+      <div>
+        <label for="finishedReading">Finished Reading
+        <input v-model="bookData.finishedReading" type="checkbox" name="finishedReading" value="">
+        </label>
+      </div>
     </div>
     <div>
-      <label for="borrowed">Borrowed</label>
-      <input v-model="bookData.ownership" type="radio" value="borrowed">
-      <label for="bought">Bought</label>
-      <input v-model="bookData.ownership" type="radio" value="bought">
+      <label for="borrowed">Borrowed
+        <input v-model="bookData.ownership" type="radio" value="borrowed">
+      </label>
+      <label for="bought">Bought
+        <input v-model="bookData.ownership" type="radio" value="bought">
+      </label>
     </div>
     <button type="submit" name="button">Add Book</button>
   </form>
